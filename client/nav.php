@@ -7,7 +7,7 @@
              if(!isset($_SESSION["user"])) { 
 
                 echo '
-                    <a href="/todo_app/index.php?signup=true" class="text-blue-500 mx-2">Sign In</a>
+                    <a href="/todo_app/index.php?signup=true" class="text-blue-500 mx-2">Sign up</a>
                     <a href="/todo_app/index.php?login=true" class="text-blue-500 mx-2">Login</a>
                 ';
             } else {
