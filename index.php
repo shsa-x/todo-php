@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,33 +13,19 @@
 <body class="bg-gray-100">
 
     <?php
-
-        session_start();
         include("./client/nav.php");
 
         if(!isset($_SESSION["user"])){
-
             if(isset($_GET['login'])){
                 include("./client/login.php"); 
-            }
-            else{
+            } else {
                 include("./client/signup.php"); 
             }
-    
         }
-        
 
         if(isset($_SESSION["user"])){
             include('./client/todo.php');
         }
-
-        // if(isset($_GET['todo'])){
-        //     include("./client/todo.php"); 
-        // }
-
-
     ?>
-
-
 </body>
 </html>
